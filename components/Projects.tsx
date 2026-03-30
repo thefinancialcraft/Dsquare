@@ -141,7 +141,11 @@ const Projects = () => {
           <span>OUR WORK IN ACTION</span>
         </div>
         <h2 className={styles.title}>Digital Excellence in Action</h2>
-        <p className={styles.subtitle}>Explore our latest case studies and high-performance digital transformations.</p>
+        <p className={styles.subtitle}>
+          Explore how <strong>Dsquare</strong> transforms businesses with premium, 
+          SEO-compatible, and high-performance digital projects. From custom CRM 
+          to insurance portals, our work drives real results.
+        </p>
       </div>
 
       <div className={styles.carouselWrapper}>
@@ -164,9 +168,9 @@ const Projects = () => {
                   <div className={styles.cardImage}>
                     <Image 
                       src={project.image} 
-                      alt={project.title}
+                      alt={`${project.title} - Dsquare Project Case Study`}
                       fill
-                      priority={true}
+                      priority={isActive}
                       className={styles.img}
                     />
                     {isActive && (
@@ -216,9 +220,9 @@ const Projects = () => {
               <div className={styles.gridImageContainer}>
                 <Image 
                   src={project.image} 
-                  alt={project.title}
+                  alt={`${project.title} Showcase`}
                   fill
-                  priority={true}
+                  priority={false}
                   className={styles.gridImg}
                 />
               </div>

@@ -40,14 +40,14 @@ const Mission = () => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <div 
-        ref={missionRef} 
-        className={styles.mission}
-      >
-        We are a team of creators,<br /> 
-        blending technology and design to deliver<br /> 
-        digital solutions that drive growth.
-      </div>
+        <h2 
+          ref={missionRef} 
+          className={styles.mission}
+        >
+          We are a team of creators,<br /> 
+          blending technology and design to deliver<br /> 
+          digital solutions that drive growth.
+        </h2>
 
       <div className={styles.tickerContainer}>
         <div className={styles.tickerTrack}>

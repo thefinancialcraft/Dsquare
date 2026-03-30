@@ -53,7 +53,11 @@ const Services = () => {
           <h2 className={styles.title}>
             Smart Services For Digital Growth
           </h2>
-          <p className={styles.subtitle}>Discover how we can help elevate your business with modern web solutions.</p>
+          <p className={styles.subtitle}>
+            Empower your brand with <strong>Dsquare's</strong> professional web development services. 
+            From custom SaaS applications to SEO-friendly business websites, we provide the 
+            technical foundation search engines love and users enjoy.
+          </p>
         </div>
       </div>
 

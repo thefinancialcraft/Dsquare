@@ -44,23 +44,23 @@ const Footer = () => {
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>Our Services</h4>
             <div className={styles.links}>
-              <span className={styles.link}>Web Development</span>
-              <span className={styles.link}>Custom GPTs</span>
-              <span className={styles.link}>Mobile Solutions</span>
-              <span className={styles.link}>UI/UX Design</span>
-              <span className={styles.link}>Cloud Integration</span>
+              <a href="#services" className={styles.link}>Web Development</a>
+              <a href="#services" className={styles.link}>Custom Software</a>
+              <a href="#services" className={styles.link}>Mobile Solutions</a>
+              <a href="#capabilities" className={styles.link}>UI/UX Design</a>
+              <a href="#stack" className={styles.link}>Tech Stack</a>
             </div>
           </div>
 
           {/* Column 3: Company */}
           <div className={styles.column}>
-            <h4 className={styles.columnTitle}>Company</h4>
+            <h4 className={styles.columnTitle}>Explore</h4>
             <div className={styles.links}>
-              <span className={styles.link}>About D Square</span>
-              <span className={styles.link}>Our Projects</span>
-              <span className={styles.link}>Case Studies</span>
-              <span className={styles.link}>Success Stories</span>
-              <span className={styles.link}>Careers</span>
+              <a href="#mission" className={styles.link}>About Dsquare</a>
+              <a href="#projects" className={styles.link}>Our Projects</a>
+              <a href="#process" className={styles.link}>Our Process</a>
+              <a href="#testimonials" className={styles.link}>Success Stories</a>
+              <a href="#faq" className={styles.link}>FAQs</a>
             </div>
           </div>
 

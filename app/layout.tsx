@@ -20,24 +20,36 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dsqaure.com"),
-  title: "Dsqaure | Web Development & Software Solutions",
-  description: "Smart, scalable web development and software solutions to grow your business.",
+  title: "Dsquare | Best Web Development & Software Solutions Agency",
+  description: "Dsquare is a top-tier web development agency delivering smart, scalable, and high-performance software solutions. Specializing in AI-driven web apps, custom CRM, and SEO-optimized business websites.",
+  keywords: [
+    "Web Development Agency",
+    "Software Solutions Express",
+    "Custom Web Application",
+    "React JS Development India",
+    "Full Stack Developers",
+    "SEO Friendly Website Design",
+    "Startup Web Development",
+    "Enterprise Software Solutions",
+    "Dsquare Official",
+    "Modern Web Design Agency"
+  ],
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon1.png",
     apple: "/icon.png",
   },
   openGraph: {
-    title: "Dsqaure | Web Development & Software Solutions",
-    description: "Smart, scalable web development and software solutions to grow your business.",
+    title: "Dsquare | Elite Web Development & Software Solutions Agency",
+    description: "Launch your next big idea with Dsquare. We build fast, secure, and scalable digital products tailored to your business needs.",
     url: "https://www.dsqaure.com/",
-    siteName: "Dsqaure",
+    siteName: "Dsquare",
     images: [
       {
         url: "/banner.png",     
         width: 1200,
         height: 630,  
-        alt: "Dsqaure Web Development Company",
+        alt: "Dsquare Web Development Agency Banner",
       },
     ],
     locale: "en_US",
@@ -45,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dsqaure | Web Development & Software Solutions",
+    title: "Dsquare | Elite Web Development & Software Solutions Agency",
     description: "Smart, scalable web development and software solutions to grow your business.",
     images: ["/banner.png"],  
   },
