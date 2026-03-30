@@ -19,23 +19,23 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Dsqaure | Premium Web Development Agency",
-  description: "Dsqaure helps businesses grow with fast, modern, and high-converting websites using cutting-edge technology.",
+  title: "Dsqaure | Web Development & Software Solutions",
+  description: "Smart, scalable web development and software solutions to grow your business.",
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon1.png",
     apple: "/icon.png",
   },
   openGraph: {
-    title: "Dsqaure | Premium Web Development Agency",
-    description: "Dsqaure helps businesses grow with fast, modern, and high-converting websites using cutting-edge technology.",
+    title: "Dsqaure | Web Development & Software Solutions",
+    description: "Smart, scalable web development and software solutions to grow your business.",
     url: "https://www.dsqaure.com/",
     siteName: "Dsqaure",
     images: [
       {
-        url: "/favicon1.png", // <--- WhatsApp/Social Preview Image
-        width: 800,
-        height: 600,
+        url: "/favicon1.jpg", // Corrected image pointer
+        width: 1200,
+        height: 630,
       },
     ],
     locale: "en_US",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dsqaure | Premium Web Development Agency",
-    description: "Dsqaure helps businesses grow with fast, modern, and high-converting websites using cutting-edge technology.",
-    images: ["/favicon1.png"],
+    title: "Dsqaure | Web Development & Software Solutions",
+    description: "Smart, scalable web development and software solutions to grow your business.",
+    images: ["/favicon1.jpg"],
   },
 };
 
