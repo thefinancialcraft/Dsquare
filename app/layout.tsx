@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Dsqaure",
     images: [
       {
-        url: "https://www.dsqaure.com/og-image.jpg",
+        url: "https://www.dsqaure.com/banner.png",
         width: 1200,
         height: 630,
         alt: "Dsqaure Web Development Company",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dsqaure | Web Development & Software Solutions",
     description: "Smart, scalable web development and software solutions to grow your business.",
-    images: ["https://www.dsqaure.com/og-image.jpg"],
+    images: ["https://www.dsqaure.com/banner.png"],
   },
 };
 
