@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: "D Square helps businesses grow with fast, modern, and high-converting websites using cutting-edge technology.",
   icons: {
     icon: "/icon.png",
-    shortcut: "/favicon.png",
+    shortcut: "/favicon1.png",
     apple: "/icon.png",
   },
 };
