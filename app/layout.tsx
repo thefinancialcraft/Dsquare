@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     description: "Smart, scalable web development and software solutions to grow your business.",
     images: ["/banner.png"],  
   },
+  verification: {
+    google: "X-QcTt29h54rRCyYp0uFEmFE6l3sacqIx8xAL06lYxk",
+  },
 };        
 
 export default function RootLayout({

@@ -35,6 +35,7 @@ const Mission = () => {
 
   return (
     <section 
+      id="mission"
       className={styles.missionSection}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
