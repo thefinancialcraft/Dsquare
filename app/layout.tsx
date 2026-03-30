@@ -21,6 +21,11 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "D Square | Premium Web Development Agency",
   description: "D Square helps businesses grow with fast, modern, and high-converting websites using cutting-edge technology.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
