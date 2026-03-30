@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Dsqaure",
     images: [
       {
-        url: "/og-image.png", // Changed from .jpg back to .png
+        url: "/og-share-preview.png", // Cache-busted filename
         width: 1200,
         height: 630,
       },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dsqaure | Web Development & Software Solutions",
     description: "Smart, scalable web development and software solutions to grow your business.",
-    images: ["/og-image.png"],
+    images: ["/og-share-preview.png"],
   },
 };
 
