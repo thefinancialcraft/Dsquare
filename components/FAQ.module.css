@@ -1,0 +1,189 @@
+.faqSection {
+  padding: 80px 4rem 120px;
+  background: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px; /* Reduced from 1300px */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(11, 15, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 1.25rem;
+}
+
+.badge span {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.badge svg {
+  color: #38BDF8;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.25;
+  background: linear-gradient(135deg, #FFFFFF 0%, #A5B4FC 50%, #0066FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.1em;
+  margin-bottom: 0.2rem;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 0;
+  max-width: 600px;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.faqItem {
+  background: rgba(11, 15, 26, 0.45);
+  backdrop-filter: blur(25px); /* Added blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 24px 32px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.faqItem:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(11, 15, 26, 0.6);
+  transform: translateY(-2px);
+}
+
+.faqItem.active {
+  background: rgba(56, 189, 248, 0.05); /* Very subtle blue highlight when active */
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.faqQuestionRow {
+  display: flex;
+  align-items: center; /* Initial alignment for closed items */
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Correctly align the row when active */
+.active .faqQuestionRow {
+    align-items: flex-start;
+}
+
+.questionContent {
+  flex: 1;
+}
+
+.question {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.active .question {
+    color: #FFFFFF; /* Ensure it stays bright */
+    margin-bottom: 12px; /* Add gap when answer appears */
+}
+
+.answer {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  animation: fadeInDown 0.4s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+}
+
+.iconCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover .iconCircle {
+  border-color: rgba(56, 189, 248, 0.8);
+  color: rgba(56, 189, 248, 1);
+}
+
+.active .iconCircle {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: rotate(0deg); /* Neutral for X */
+}
+
+@media (max-width: 768px) {
+  .faqSection {
+    padding: 60px 1.5rem;
+  }
+  
+  .faqItem {
+    padding: 20px 24px;
+  }
+  
+  .question {
+    font-size: 1.05rem;
+  }
+  
+  .iconCircle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .iconCircle svg {
+    width: 14px;
+    height: 14px;
+  }
+}
