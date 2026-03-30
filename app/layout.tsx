@@ -32,13 +32,7 @@ export const metadata: Metadata = {
     description: "Smart, scalable web development and software solutions to grow your business.",
     url: "https://www.dsqaure.com/",
     siteName: "Dsqaure",
-    images: [
-      {
-        url: "https://www.dsqaure.com/v-logo.png", // <--- Using Absolute URL for maximum reliability
-        width: 1200,
-        height: 630,
-      },
-    ],
+    images: ["https://www.dsqaure.com/v-logo.png"],
     locale: "en_US",
     type: "website",
   },
