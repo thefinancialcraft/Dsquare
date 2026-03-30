@@ -19,6 +19,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.dsqaure.com"),
   title: "Dsqaure | Web Development & Software Solutions",
   description: "Smart, scalable web development and software solutions to grow your business.",
   icons: {
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Dsqaure",
     images: [
       {
-        url: "/favicon1.jpg", // Corrected image pointer
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dsqaure | Web Development & Software Solutions",
     description: "Smart, scalable web development and software solutions to grow your business.",
-    images: ["/favicon1.jpg"],
+    images: ["/og-image.jpg"],
   },
 };
 
