@@ -19,12 +19,33 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "D Square | Premium Web Development Agency",
-  description: "D Square helps businesses grow with fast, modern, and high-converting websites using cutting-edge technology.",
+  title: "Dsqaure | Premium Web Development Agency",
+  description: "Dsqaure helps businesses grow with fast, modern, and high-converting websites using cutting-edge technology.",
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon1.png",
     apple: "/icon.png",
+  },
+  openGraph: {
+    title: "Dsqaure | Premium Web Development Agency",
+    description: "Dsqaure helps businesses grow with fast, modern, and high-converting websites using cutting-edge technology.",
+    url: "https://www.dsqaure.com/",
+    siteName: "Dsqaure",
+    images: [
+      {
+        url: "/favicon1.png", // <--- WhatsApp/Social Preview Image
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dsqaure | Premium Web Development Agency",
+    description: "Dsqaure helps businesses grow with fast, modern, and high-converting websites using cutting-edge technology.",
+    images: ["/favicon1.png"],
   },
 };
 
