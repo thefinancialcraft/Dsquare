@@ -96,6 +96,8 @@
 
 .ctaActions {
   flex: 0 0 auto;
+  position: relative;
+  z-index: 100;
 }
 
 .bookBtn {

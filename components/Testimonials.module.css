@@ -18,6 +18,8 @@
   justify-content: center;
   text-align: center;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 10;
 }
 
 .badge {
@@ -131,7 +133,7 @@
   left: 50%;
   width: 0;
   height: 0;
-  z-index: 10;
+  z-index: 5;
 }
 
 .orbitSpinner {
@@ -336,6 +338,8 @@
   gap: 24px;
   margin-top: 80px;
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 .reviewCard {

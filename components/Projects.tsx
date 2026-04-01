@@ -142,9 +142,8 @@ const Projects = () => {
         </div>
         <h2 className={styles.title}>Digital Excellence in Action</h2>
         <p className={styles.subtitle}>
-          Explore how <strong>Dsquare</strong> transforms businesses with premium, 
-          SEO-compatible, and high-performance digital projects. From custom CRM 
-          to insurance portals, our work drives real results.
+          Transforming businesses with high-performance digital projects 
+          that drive measurable results and growth.
         </p>
       </div>
 

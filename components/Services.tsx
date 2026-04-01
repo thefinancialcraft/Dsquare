@@ -8,7 +8,7 @@ const SERVICES = [
   {
     id: 's1',
     title: "Website Development",
-    desc: "Creating responsive and modern websites like business sites, portfolios, landing pages, etc.",
+    desc: "Creating responsive and modern websites for businesses and portfolios.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 7h-9m3 3h-3m-3 3H5m3 3h-3m12-9H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2z"/><path d="M16 2v5"/><path d="M8 2v5"/><path d="M3 12h18"/></svg>
     )
@@ -16,7 +16,7 @@ const SERVICES = [
   {
     id: 's2',
     title: "Web & App Development",
-    desc: "Building custom web apps and mobile apps such as dashboards, CRM systems, booking apps, etc.",
+    desc: "Building custom web and mobile applications tailored to your needs.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
     )
@@ -39,7 +39,11 @@ const SERVICES = [
   }
 ];
 
-const Services = () => {
+interface ServicesProps {
+  onBookCall?: () => void;
+}
+
+const Services: React.FC<ServicesProps> = ({ onBookCall }) => {
   return (
     <section className={styles.services} id="services">
       <div className={styles.header}>
@@ -54,9 +58,8 @@ const Services = () => {
             Smart Services For Digital Growth
           </h2>
           <p className={styles.subtitle}>
-            Empower your brand with <strong>Dsquare's</strong> professional web development services. 
-            From custom SaaS applications to SEO-friendly business websites, we provide the 
-            technical foundation search engines love and users enjoy.
+            Empowering brands with professional web development, from custom SaaS solutions 
+            to SEO-optimized business websites.
           </p>
         </div>
       </div>
@@ -128,7 +131,7 @@ const Services = () => {
         <div className={styles.socialText}>
           Join Over <span className={styles.greenText}>200K</span> Of Inspiring Creatives
         </div>
-        <button className={styles.ctaBtn}>
+        <button className={styles.ctaBtn} onClick={onBookCall}>
           Explore Our Solution
           <div className={styles.ctaArrow}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
