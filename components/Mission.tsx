@@ -19,18 +19,20 @@ const Mission = () => {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!missionRef.current) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const h2Rect = missionRef.current.getBoundingClientRect();
+    // Calculate cursor position relative to the h2 itself where the background gradient is applied
+    const x = e.clientX - h2Rect.left;
+    const y = e.clientY - h2Rect.top;
     
-    // Set variables on the section so child inherits them
-    e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
-    e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+    // Set variables directly on the h2 element
+    missionRef.current.style.setProperty('--mouse-x', `${x}px`);
+    missionRef.current.style.setProperty('--mouse-y', `${y}px`);
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.currentTarget.style.setProperty('--mouse-x', `-500px`);
-    e.currentTarget.style.setProperty('--mouse-y', `-500px`);
+    if (!missionRef.current) return;
+    missionRef.current.style.setProperty('--mouse-x', `-500px`);
+    missionRef.current.style.setProperty('--mouse-y', `-500px`);
   };
 
   return (

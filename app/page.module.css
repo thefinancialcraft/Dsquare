@@ -11,9 +11,8 @@
   left: 2%; 
   right: 2%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 120px;
   z-index: 2000; /* Above Hero */
   max-width: 1600px;
   margin: 0 auto;
@@ -33,15 +32,14 @@
   padding: 0 40px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 100px;
-  height: 56px;
+  height: 48px;
   width: auto;
   position: relative;
   z-index: 1000;
   
   /* Constant Glassmorphism Style */
   background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(15px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   will-change: backdrop-filter, transform, background;
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -57,20 +55,58 @@
   backdrop-filter: blur(20px);
   border-color: rgba(0, 102, 255, 0.3);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  height: 50px;
 }
 
 .logoContainer {
-  height: 72px; 
   display: flex;
   align-items: center;
   padding-top: 8px; /* Slightly pushed down from top */
+  gap: 12px;
+}
+
+.logoText {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #c0c0c0 0%, #ffffff 50%, #c0c0c0 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: -10px;
+  margin-top: -5px;
+  position: relative;
+  z-index: 1;
+  animation: slideOutFromLogo 1s cubic-bezier(0.16, 1, 0.3, 1) forwards, textShine 4s linear infinite;
+}
+
+@keyframes slideOutFromLogo {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textShine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .logoImg {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  max-width: 50px; /* Bada kar diya */
+  height: auto;
   object-fit: contain;
+  position: relative;
+  z-index: 2;
 }
 
 .navLinks {
@@ -237,11 +273,10 @@
 }
 
 .btnNav {
-  height: 56px;
-  padding: 0 28px 0 12px;
+  height: 48px;
+  padding: 0 24px 0 8px;
   background: rgba(0, 0, 0, 0.45); 
-  backdrop-filter: blur(25px); 
-  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(15px); 
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 100px;
   color: white;
@@ -249,7 +284,7 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -261,8 +296,8 @@
 }
 
 .callIcon {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   background: var(--primary);
   border-radius: 50%;
   display: flex;
@@ -514,4 +549,147 @@
 @media (max-width: 600px) {
   .footerTop { grid-template-columns: 1fr; }
   .statsRow { grid-template-columns: 1fr; }
+}
+
+/* --- Mobile Navigation Styles --- */
+
+.navActions {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px 8px;
+  margin-left: 15px;
+  z-index: 2010;
+}
+
+.hamburgerLine {
+  width: 20px;
+  height: 2px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1150px) {
+  .navBtnText {
+    display: none;
+  }
+  
+  .btnNav {
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .callIcon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    padding: 0 20px;
+    left: 0;
+    right: 0;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav {
+    position: absolute;
+    top: -400px;
+    left: 20px;
+    right: 20px;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(11, 15, 26, 0.95);
+    border: 1px solid rgba(0, 102, 255, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .nav.navOpen {
+    top: 80px;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .navLinks {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .navLinks a {
+    font-size: 1rem;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .navIndicator {
+    display: none !important;
+  }
+  
+  .navBtnText {
+    display: none;
+  }
+  
+  .btnNav {
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+  }
+  
+  .callIcon {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Hamburger Animation */
+  .hamburgerOpen .hamburgerLine:first-child {
+    transform: rotate(45deg);
+  }
+  
+  .hamburgerOpen .hamburgerLine:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburgerOpen .hamburgerLine:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 0 10px;
+  }
+  .logoImg {
+    width: 160px;
+  }
 }

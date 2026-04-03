@@ -72,18 +72,35 @@ const GlobalParticles = () => {
     },
     detectRetina: true,
     fullScreen: { 
-      enable: true, 
-      zIndex: -1 // Behind all content so buttons still work
+      enable: false,
     },
   }), []);
 
   if (!init) return null;
 
   return (
-    <Particles
-      id="global-background-particles"
-      options={particlesOptions}
-    />
+    <div style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: 0,
+      pointerEvents: 'none',
+      overflow: 'hidden',
+    }}>
+      <Particles
+        id="global-background-particles"
+        options={particlesOptions}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+        }}
+      />
+    </div>
   );
 };
 

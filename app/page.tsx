@@ -36,6 +36,7 @@ export default function Home() {
   const navContainerRef = useRef<HTMLDivElement>(null);
   const isScrollingRef = useRef(false);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Re-calculate indicator position
   useEffect(() => {
@@ -114,27 +115,30 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <GlobalParticles />
       <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
         <div className={styles.logoContainer}>
           <Image 
-            src="/logo.png" 
+            src="/new-logo2.png" 
             alt="D Square Logo" 
-            width={240} 
-            height={64} 
+            width={350} 
+            height={120} 
             className={styles.logoImg}
             priority
           />
+          <span className={styles.logoText}>DSquare</span>
         </div>
         
-        <nav className={styles.nav}>
+        <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.navOpen : ''}`}>
             <div className={styles.navLinks} ref={navContainerRef}>
               {navLinks.map((link, idx) => (
                 <a 
                   key={idx} 
                   href={link.h} 
                   data-active={activeIndex === idx}
-                  onClick={(e) => handleNavClick(e, idx, link.h)}
+                  onClick={(e) => {
+                    handleNavClick(e, idx, link.h);
+                    setIsMobileMenuOpen(false);
+                  }}
                 >
                   {link.n}
                 </a>
@@ -146,12 +150,24 @@ export default function Home() {
             </div>
         </nav>
 
-        <button className={styles.btnNav} onClick={() => setIsBookingModalOpen(true)}>
-          <div className={styles.callIcon}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.88 12.88 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.19-1.32a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          </div>
-          Book a call
-        </button>
+        <div className={styles.navActions}>
+          <button className={styles.btnNav} onClick={() => setIsBookingModalOpen(true)}>
+            <div className={styles.callIcon}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.88 12.88 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.19-1.32a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <span className={styles.navBtnText}>Book a call</span>
+          </button>
+
+          <button 
+            className={`${styles.hamburger} ${isMobileMenuOpen ? styles.hamburgerOpen : ''}`} 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+          </button>
+        </div>
       </header>
       
       <Hero onBookCall={() => setIsBookingModalOpen(true)} />
